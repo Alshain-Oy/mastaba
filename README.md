@@ -43,7 +43,7 @@ ncc.configure( template, searchCorrelationVerify = 0.8 )
 ncc.configure( template, refineCorrelation = 0.85 )
 
 # nmsRadius = integer, 1..N
-# Minimum distance in pixels (in the original image scale ie, leve 0) between two patterns
+# Minimum distance in pixels (in the original image scale ie. level 0) between two patterns
 # All patterns within nmsRadius are grouped and non-maxmimal suppression (nms) is used to select the best result for further refinement
 ncc.configure( template, nmsRadius = 32 )
 
