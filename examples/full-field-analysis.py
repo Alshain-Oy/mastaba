@@ -39,7 +39,7 @@ outimage = test_image.copy()
 delta, error_idx = libMastaba.FullViewAnalysis.find_errors( outimage, offsetted_image, bw_clean_image, mask, err_threshold = 25 )
 
 # convert delta into a normal image
-deltaimg = (delta*255).astype( np.uint8 )
+deltaimg = cv2.threshold( delta.astype( np.uint8 ), 1, 255, cv2.THRESH_BINARY )
 
 # find errors
 contours, hierarchy = cv2.findContours( deltaimg, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE )
